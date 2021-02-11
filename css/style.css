@@ -1826,8 +1826,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   margin-bottom: 5px;
   text-align: center;
   height: 50px;
- /* border-radius: 5px;*/
-}
+ /* border-radius: 5px;
+}*/
 /*
 .f-price .filter-item input[type="range"]{
   height: 50px;
