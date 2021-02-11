@@ -1892,8 +1892,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   grid-template-columns: 1fr 65%;
   outline: 5px solid rgba(0, 10, 0, 0.5);
   outline-offset: -5px;
-
-  /*margin-bottom: 28px;*/
 }
 
 
@@ -1901,23 +1899,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   padding: 0;
   margin: 0;
   list-style: none;
-  /*display: grid;
-  grid-template-columns: repeat(5, auto);
-  justify-items: center;
-  align-items: center;*/
   display: flex;
   justify-content: space-around;
   align-items: center;
- /* margin-top: auto;*/
   margin-bottom: 5px;
 }
 
 .sorting-item{
   height: 18px;
   border-bottom: 1px dotted var(--basic-red);
-  /*text-decoration: underline;
-  text-decoration-color: red;
-  text-decoration-style: dotted;*/
 }
 
 .sorting-link{
@@ -1965,9 +1955,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .catalog-list{
   padding: 0;
   margin: 0;
- /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
