@@ -26,8 +26,8 @@
             </form>
             <!-- меню покупок -->
             <ul class="top-user-menu">
-               <li class="top-button"><a href="#">Закладки:&nbsp;<span>0</span></a></li>
-               <li class="top-button red-back"><a href="#">Корзина:&nbsp;<span>10</span></a></li>
+               <li class="top-button bookmark"><a href="#">Закладки:&nbsp;<span>0</span></a></li>
+               <li class="top-button cart red-back"><a href="#">Корзина:&nbsp;<span>10</span></a></li>
                <li class="top-button buy-top-button"><a href="#">Оформить заказ</a></li>
             </ul>
          </div>
@@ -50,11 +50,21 @@
                <p class="top-phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
                <p class="top-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
-            <div class="user-in">
+            <div class="autorized">
                <h2 class="visualy-hidden">Блок авторизации</h2>
                <div class="user-account">
-                  Равшан Джамшутович
-                  <a href="#" class="exit-button">Выход из аккаунта</a>
+                  <a href="#" class="user-profile" title="Переход на страницу авторизованного пользователя">
+                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Иконка авторизованного пользователя">
+                        <path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill="#C5C5C5"/>
+                     </svg>
+                     Равшан Джамшутович
+                  </a>
+                  <a href="#" class="exit-button" title="Выход из аккаунта">
+                     <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Выход из аккаунта">
+                        <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
+                        <path d="M2.10601 13.952V3.048C2.12401 2.672 2.27701 1.991 3.11601 1.991H8.14301V0H3.11601C0.938006 0 0.112006 1.81 0.0870056 3.027V13.973C0.112006 15.189 0.938006 17 3.11601 17H8.14301V15.01H3.11601C2.27701 15.01 2.12401 14.327 2.10601 13.952Z" fill="#C5C5C5"/>
+                     </svg>
+                  </a>
                </div>
                <ul class="user-list-link">
                   <li class="user-item-link"><a href="#" class="user-link">Мои заказы</a></li>
@@ -88,14 +98,11 @@
          <div class="container">
 
             <!-- bread crumbs -->
-            <div class="bread-crubms">
-               <ul class="bread-crumbs-list">
-                  <li class="bread-crumbs-item"><a href="#" class="bread-crumbs-link">Каталог</a></li>
-                  <li class="bread-crumbs-item"><a href="#" class="bread-crumbs-link">Инструмент</a></li>
-                  <li class="bread-crumbs-item current-bread-crums"><a class="bread-crumbs-link">Перфораторы</a></li>
-               </ul>
-            </div>
-
+            <ul class="breadcrumbs">
+               <li><a href="#">Каталог</a></li>
+               <li><a href="#">Инструмент</a></li>
+               <li class="current-breadcrums">Перфораторы</li>
+            </ul>
 
             <!-- title -->
             <div class="title-wrapper back-lightblue perfo-title">
@@ -115,45 +122,48 @@
                   <!-- price -->
                   <fieldset class="f-section f-price">
                      <legend class="f-title">Цена:</legend>
-                     <ul class=f-list>
-                        <li class="filter-item back-lightyellow">
-                           <label class="visualy-hidden" for="f-coast-range">Диапазон стоимости товаров</label>
-                           <input type="range" name="f-coast-range" id="f-coast-range">
-                        </li>
-                        <li class="filter-item half-field back-lightyellow">
-                           <label class="visualy-hidden" for="f-min-coast">Минимальная стоимость</label>
-                           <input type="text" name="f-min-coast" id="f-min-coast" value="0">
-                        </li>
-                        <span>-</span>
-                        <li class="filter-item half-field back-lightyellow">
-                           <label class="visualy-hidden" for="f-max-coast">Максимальная стоимость</label>
-                           <input type="text" name="f-max-coast" id="f-max-coast" value="30000">
-                        </li>
-                     </ul>
+                        <div class="range-filter">
+                           <div class="range-controls back-lightyellow">
+                              <div class="scale">
+                                 <div class="bar" style="width: 80%; margin-left: 5%"></div>
+                              </div>
+                              <div class="toggle toggle-min" tabindex="0" style="left: 5%"></div>
+                              <div class="toggle toggle-max" tabindex="0" style="left: 70%"></div>
+                            </div>
+                            <div class="price-controls">
+                              <label class="min-price back-lightyellow">
+                                 <input type="text" name="min-price" value="0" class="back-lightyellow">
+                              </label>
+                              -
+                              <label class="max-price">
+                                 <input type="text" name="max-price" value="15000" class="back-lightyellow">
+                              </label>
+                            </div>
+                        </div>
                   </fieldset>
 
                   <!-- manufacturers -->
                   <fieldset class="f-section f-manufacturers">
                      <legend class="f-title">Производители:</legend>
                         <ul class="f-list">
-                           <li class="filter-item">
-                              <input type="checkbox" name="f-bosch" id="f-bosch" checked>
+                           <li class="filter-item filter-checkbox">
+                              <input type="checkbox" name="f-bosch" id="f-bosch" class="visualy-hidden filter-input-checkbox" checked>
                               <label for="f-bosch">BOSCH</label>
                            </li>
-                           <li class="filter-item">
-                              <input type="checkbox" name="f-interskol" id="f-interskol">
+                           <li class="filter-item filter-checkbox">
+                              <input type="checkbox" name="f-interskol" id="f-interskol" class="visualy-hidden filter-input-checkbox" disabled>
                               <label for="f-interskol">ИНТЕРСКОЛ</label>
                            </li>
-                           <li class="filter-item">
-                              <input type="checkbox" name="f-makita" id="f-makita" checked>
+                           <li class="filter-item filter-checkbox">
+                              <input type="checkbox" name="f-makita" id="f-makita" class="visualy-hidden filter-input-checkbox" checked>
                               <label for="f-makita">MAKITA</label>
                            </li>
-                           <li class="filter-item">
-                              <input type="checkbox" name="f-dewalt" id="f-dewalt">
+                           <li class="filter-item filter-checkbox">
+                              <input type="checkbox" name="f-dewalt" id="f-dewalt" class="visualy-hidden filter-input-checkbox">
                               <label for="f-dewalt">DEWALT</label>
                            </li>
-                           <li class="filter-item">
-                              <input type="checkbox" name="f-hitachi" id="f-hitachi">
+                           <li class="filter-item filter-checkbox">
+                              <input type="checkbox" name="f-hitachi" id="f-hitachi" class="visualy-hidden filter-input-checkbox">
                               <label for="f-hitachi">HITACHI</label>
                            </li>
                         </ul>
@@ -163,13 +173,13 @@
                   <fieldset class="f-section f-power">
                      <legend class="f-title">Питание:</legend>
                      <ul class="f-list">
-                        <li class="filter-item">
-                           <input type="radio" name="f-power" id="f-power-reharge" value="rechargeable" checked>
-                           <label for="f-power-reharge">Аккумуляторные</label>
+                        <li class="filter-item filter-radio">
+                           <input type="radio" name="f-power" id="f-rech" value="rechargeable" class="visualy-hidden filter-input-radio" checked>
+                           <label for="f-rech">Аккумуляторные</label>
                         </li>
-                        <li class="filter-item">
-                           <input type="radio" name="f-power" id="f-power-network" value="network">
-                           <label for="f-power-network">Сетевые</label>
+                        <li class="filter-item filter-radio">
+                           <input type="radio" name="f-power" id="f-net" value="network" class="visualy-hidden filter-input-radio">
+                           <label for="f-net">Сетевые</label>
                         </li>
                      </ul>
                   </fieldset>
@@ -188,11 +198,11 @@
                   </div>
                   <!-- Меню сортировки -->
                   <ul class="sorting-list">
-                     <li class="sorting-item sorting-active"><a href="#" class="sorting-link">По цене</a></li>
-                     <li class="sorting-item"><a href="#" class="sorting-link">По типу</a></li>
-                     <li class="sorting-item"><a href="#" class="sorting-link">По функционалу</a></li>
-                     <li class="sorting-item sorting-active noline"><a href="#" class="sorting-link">По возрастанию</a></li>
-                     <li class="sorting-item noline"><a href="#" class="sorting-link">По убыванию</a></li>
+                     <li class="sorting-item active">По цене</li>
+                     <li class="sorting-item">По типу</li>
+                     <li class="sorting-item">По функционалу</li>
+                     <li class="sorting-item triangle active"><!--По возрастанию--></li>
+                     <li class="sorting-item triangle"><!--По убыванию--></li>
                   </ul>
                </div>
 
@@ -228,7 +238,7 @@
                            <button type="button" class="card-button bookmark-button">В закладки</button>
                         </div>
                      </li>
-                     <li class="gray-border good-item current-item">
+                     <li class="gray-border good-item new">
                         <div class="good-text">
                            <h4 class="good-title">Перфоратор BOSCH <br>BFG 6000</h4>
                            <p class="good-oldprice">30500 Р.</p>
@@ -242,7 +252,7 @@
                            <button type="button" class="card-button bookmark-button">В закладки</button>
                         </div>
                      </li>
-                     <li class="gray-border good-item">
+                     <li class="gray-border good-item new">
                         <div class="good-text">
                            <h4 class="good-title">Перфоратор BOSCH <br>BFG 3000</h4>
                            <p class="good-oldprice">22500 Р.</p>
@@ -270,7 +280,7 @@
                            <button type="button" class="card-button bookmark-button">В закладки</button>
                         </div>
                      </li>
-                     <li class="gray-border good-item">
+                     <li class="gray-border good-item new">
                         <div class="good-text">
                            <h4 class="good-title">Перфоратор BOSCH <br>BFG 2000</h4>
                            <p class="good-oldprice"></p>
@@ -284,7 +294,7 @@
                            <button type="button" class="card-button bookmark-button">В закладки</button>
                         </div>
                      </li>
-                     <li class="gray-border good-item">
+                     <li class="gray-border good-item new">
                         <div class="good-text">
                            <h4 class="good-title">Перфоратор BOSCH <br>BFG 3000</h4>
                            <p class="good-oldprice">22500 Р.</p>
@@ -312,7 +322,7 @@
                            <button type="button" class="card-button bookmark-button">В закладки</button>
                         </div>
                      </li>
-                     <li class="gray-border good-item">
+                     <li class="gray-border good-item new">
                         <div class="good-text">
                            <h4 class="good-title">Перфоратор BOSCH <br>BFG 2000</h4>
                            <p class="good-oldprice"></p>
@@ -381,7 +391,7 @@
             <div class="footer-middle">
                <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>+7 (812) 555-05-55</p>
                <div class="nav">
-                  <ul class="nav footer-nav">
+                  <ul class="footer-nav">
                      <li class="footer-nav-item"><a class="footer-nav-link gold" href="#">Материалы</a></li>
                      <li class="footer-nav-item"><a class="footer-nav-link gold" href="#">Техника</a></li>
                      <li class="footer-nav-item"><a class="footer-nav-link gold" href="#">Инструмент</a></li>

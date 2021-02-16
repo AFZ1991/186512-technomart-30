@@ -23,11 +23,14 @@
             <!-- поиск -->
             <form action="#" method="GET" class="form-search">
                <input type="search" name="search" id="search" placeholder="Поиск:">
+               <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+               </svg>
             </form>
             <!-- меню покупок -->
             <ul class="top-user-menu">
-               <li class="top-button"><a href="#">Закладки:&nbsp;<span>0</span></a></li>
-               <li class="top-button"><a href="#">Корзина:&nbsp;<span>0</span></a></li>
+               <li class="top-button bookmark"><a href="#">Закладки:&nbsp;<span>0</span></a></li>
+               <li class="top-button cart"><a href="#">Корзина:&nbsp;<span>0</span></a></li>
                <li class="top-button buy-top-button"><a href="#">Оформить заказ</a></li>
             </ul>
          </div>
@@ -49,9 +52,15 @@
                <p class="top-phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
                <p class="top-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
-            <div class="user">
+            <div class="unautorized">
                <h2 class="visualy-hidden">Блок авторизации</h2>
-               <a href="#" class="user-button enter">Войти</a>
+               <a href="#" class="user-button enter">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M14.1667 9L5.71429 0.5V6.5H0V11.5H5.71429V17.5L14.1667 9Z" fill="#C5C5C5"/>
+                     <path d="M16.1771 15.51H11.3895V17.5H16.1771C18.2514 17.5 19.0381 15.69 19.0619 14.474V3.528C19.0381 2.311 18.2514 0.5 16.1771 0.5H11.3895V2.49H16.1771C16.9762 2.49 17.1219 3.171 17.1391 3.547V14.451C17.1229 14.827 16.9762 15.51 16.1771 15.51Z" fill="#C5C5C5"/>
+                  </svg>
+                  Войти
+               </a>
                <a href="#" class="user-button registration">Регистрация</a>
             </div>
 
@@ -83,7 +92,7 @@
          <div class="container">
             <h2 class="visualy-hidden">Ассортимент</h2>
             <!-- верхний ряд -->
-            <div class="features-card">
+            <div class="features-card new">
                <h3 class="features-title">Материалы</h3>
                <a href="#" class="features-button">на любой вкус</a>
             </div>
@@ -106,17 +115,21 @@
             <!-- slider -->
             <div class="slider">
                <ul class="slider-list">
-                  <li class="slider-card slider-card-active">
-                     <h3 class="slider-title">Перфораторы</h3>
-                     <p class="slider-desc">Настоящие мужские игрушки</p>
-                     <a href="catalog.html" class="button slider-button">открыть каталог</a>
-                  </li>
-                  <li class="slider-card">
+                  <li class="slider-card slide-1">
                      <h3 class="slider-title">Дрели</h3>
                      <p class="slider-desc">Соседям на радость</p>
                      <a href="catalog.html" class="button slider-button">открыть каталог</a>
                   </li>
+                  <li class="slider-card slide-2 slider-card-active">
+                     <h3 class="slider-title">Перфораторы</h3>
+                     <p class="slider-desc">Настоящие мужские игрушки</p>
+                     <a href="catalog.html" class="button slider-button">открыть каталог</a>
+                  </li>
                </ul>
+               <div class="slider-controls">
+                  <button type="button" aria-label="Первый слайд"></button>
+                  <button class="current" type="button" aria-label="Первый слайд"></button>
+               </div>
             </div>
          </div>
       </section>
@@ -146,7 +159,7 @@
                         <button type="button" class="card-button bookmark-button">В закладки</button>
                      </div>
                   </li>
-                  <li class="gray-border good-item">
+                  <li class="gray-border good-item new">
                      <div class="good-text">
                         <h3 class="good-title">Перфоратор BOSCH <br>BFG 3000</h3>
                         <p class="good-oldprice">22500 Р.</p>
@@ -174,7 +187,7 @@
                         <button type="button" class="card-button bookmark-button">В закладки</button>
                      </div>
                   </li>
-                  <li class="gray-border good-item">
+                  <li class="gray-border good-item new">
                      <div class="good-text">
                         <h3 class="good-title">Перфоратор BOSCH <br>BFG 2000</h3>
                         <p class="good-oldprice">22500 Р.</p>
