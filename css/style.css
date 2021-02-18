@@ -179,9 +179,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /*** Header ***/
 
 .page-header{
- /* height: 320px;*/
   display: grid;
-  grid-template-rows: 42px auto/*278px*/;
+  grid-template-rows: 42px auto;
 }
 
 .page-header a{
@@ -413,7 +412,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: min-content auto/*60px*/;
+  grid-template-rows: min-content auto;
   align-items: top;
   padding-top: 46px;
   padding-bottom: 60px;
@@ -731,8 +730,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   color: var(--basic-white);
   opacity: 0.5;
 }
-
-
 
 
 
@@ -1075,7 +1072,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .popular-goods .container{
   display: grid;
-  grid-template-rows: auto/*89px*/ auto/*318px*/;
+  grid-template-rows: auto auto;
   grid-gap: 20px;
   padding-bottom: 70px;
 }
