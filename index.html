@@ -17,7 +17,7 @@
       <div class="header-top">
          <div class="container">
             <!-- логотип -->
-            <a class="link-logo">
+            <a class="link-logo" href="index.html">
                <img src="img/logo/technomart.png" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»" class="main-logo">
             </a>
             <!-- поиск -->
@@ -42,9 +42,9 @@
             <div class="header-info">
                <h1 class="visualy-hidden">Техномарт</h1>
                <p class="top-slogan">
-                  <i>Интернет-магазин<br>
-                  строительных материалов<br>
-                  и инструментов для ремонта</i>
+                  <i>Интернет-магазин
+                  строительных материалов
+                  и&nbsp;инструментов для ремонта</i>
                </p>
             </div>
             <div class="top-contacts">
@@ -267,7 +267,7 @@
          <div class="container">
             <h2 class="title title-black">Сервисы</h2>
             <div class="services-slogan">
-               <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+               <p>Хороший интернет-магазин отличается от плохого не только ценами!
                Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             </div>
 
@@ -321,10 +321,13 @@
             <section class="about">
                <div class="about-container">
                   <h2 class="title title-black">Компания "техномарт"</h2>
-                  <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>ремонта и строительства не оставит равнодушными любителей сэкономить на<br>гастарбайтерах.</p>
+                  <p class="about-desc">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+                  ремонта и строительства не оставит равнодушными любителей сэкономить на
+                  гастарбайтерах.</p>
                </div>
                <div class="content-wrapper">
-                  <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>Техномарт работает со многими транспортными компаниями:</p>
+                  <p class="about-desc">Мы можем доставить ваш товар в самые отдаленные точки России!
+                  Техномарт&nbsp;работает со многими транспортными компаниями:</p>
                   <ul class="transport-list">
                      <li class="transport-item">Деловые линии</li>
                      <li class="transport-item">Автотрейдинг</li>
@@ -336,7 +339,7 @@
             <!-- блок контатов -->
             <section class="contacts">
                <h2 class="title title-black">Контакты</h2>
-               <p class="contacts-desc">Вы можете забрать товар сами,<br>
+               <p class="contacts-desc">Вы можете забрать товар сами,
                заехав в наш офис:</p>
                <a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&utm_source=main_stripe_big&z=17.15" target="blank" class="contacts-link">
                   <img src="img/maps/mini-map.png" width="300" height="158" alt="Адрес на карте: город Санкт-Петербург, улица Большая Конюшенная, дом 19" class="contacts-minimap">
@@ -356,7 +359,7 @@
          <h2 class="visualy-hidden">Верхняя секция подвала сайта</h2>
             <!-- верхнее меню -->
             <div class="footer-top">
-               <a class="footer-logo">
+               <a class="footer-logo" href="index.html">
                   <img src="img/logo/logo.png" width="220" height="68" alt="Логотип интернет-магазина «Техномарт»" class="footer-logo-img">
                </a>
                <div class="nav">
@@ -430,45 +433,49 @@
 
 
    <!-- Модальное окно обратной связи -->
-   <section class="modal modal-feedback modal-sho">
-      <h2 class="visualy-hidden">Форма обратной связи</h2>
-      <div class="modal-wrapper">
-         <form action="#" method="POST" class="feedback-form">
-            <div class="wrapper-m-content">
-               <div class="m-container">
-                  <div class="modal-field">
-                     <label for="m-name">Ваше имя:</label>
-                     <input type="text" name="m-name" id="m-name" placeholder="Имя Фамилия">
-                  </div>
-                  <div class="modal-field">
-                     <label for="m-email">Ваш e-mail:</label>
-                     <input type="email" name="m-email" id="m-email" placeholder="email@example.com">
-                  </div>
-                  <div class="modal-field">
-                     <label for="m-message">Текст письма:</label>
-                     <textarea name="m-message" id="m-message" placeholder="В свободной форме"></textarea>
+   <div class="modal-fade">
+      <section class="modal modal-feedback">
+         <h2 class="visualy-hidden">Форма обратной связи</h2>
+         <div class="modal-wrapper">
+            <form action="#" method="POST" class="feedback-form">
+               <div class="wrapper-m-content">
+                  <div class="m-container">
+                     <div class="modal-field">
+                        <label for="m-name">Ваше имя:</label>
+                        <input type="text" name="m-name" id="m-name" placeholder="Имя Фамилия">
+                     </div>
+                     <div class="modal-field">
+                        <label for="m-email">Ваш e-mail:</label>
+                        <input type="email" name="m-email" id="m-email" placeholder="email@example.com">
+                     </div>
+                     <div class="modal-field">
+                        <label for="m-message">Текст письма:</label>
+                        <textarea name="m-message" id="m-message" placeholder="В свободной форме"></textarea>
+                     </div>
                   </div>
                </div>
-            </div>
-            <div class="wrapper-m-buttons">
-               <div class="m-container">
-                  <button type="submit" class="button modal-submit">Отправить</button>
+               <div class="wrapper-m-buttons">
+                  <div class="m-container">
+                     <button type="submit" class="button modal-submit">Отправить</button>
+                  </div>
                </div>
-            </div>
-         </form>
-      </div>
-      <button type="button" class="modal-close" aria-label="Закрыть"></button>
-   </section>
+            </form>
+         </div>
+         <button type="button" class="modal-close" aria-label="Закрыть"></button>
+      </section>
+   </div>
 
 
    <!-- Модальное окно карты -->
-   <section class="modal modal-map modal-show">
-      <h2 class="visualy-hidden">Карта</h2>
-      <div class="modal-wrapper">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.742193701169!2d30.314279829311577!3d59.93887902996969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613745937929!5m2!1sru!2sru" width="940" height="445" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
-      <button type="button" class="modal-close" aria-label="Закрыть"></button>
-   </section>
+   <div class="modal-fade">
+      <section class="modal modal-map">
+         <h2 class="visualy-hidden">Карта</h2>
+         <div class="modal-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.742193701169!2d30.314279829311577!3d59.93887902996969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613745937929!5m2!1sru!2sru" width="940" height="445" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+         </div>
+         <button type="button" class="modal-close" aria-label="Закрыть"></button>
+      </section>
+   </div>
 
 
   </body>
