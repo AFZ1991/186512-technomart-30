@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
    <head>
-      <meta charset="utf-8" class="page">
+      <meta charset="utf-8">
       <title>HTML Academy: Техномарт</title>
       <link rel="icon" href="favicon.ico">
       <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -427,7 +427,7 @@
 
 
    <!-- Модальное окно обратной связи -->
-   <section class="modal modal-feedback">
+   <section class="modal modal-feedback modal-sho">
       <h2 class="visualy-hidden">Форма обратной связи</h2>
       <div class="modal-wrapper">
          <form action="#" method="POST" class="feedback-form">
@@ -454,17 +454,17 @@
             </div>
          </form>
       </div>
-      <button type="button" class="modal-close">Закрыть</button>
+      <button type="button" class="modal-close" aria-label="Закрыть"></button>
    </section>
 
 
    <!-- Модальное окно карты -->
-   <section class="modal modal-map">
+   <section class="modal modal-map modal-show">
       <h2 class="visualy-hidden">Карта</h2>
       <div class="modal-wrapper">
-         <img src="img/maps/map.png" width="970" height="477" alt="Крупное изображение карты с нашим адресом">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.742193701169!2d30.314279829311577!3d59.93887902996969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613745937929!5m2!1sru!2sru" width="940" height="445" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
-      <button type="button" class="modal-close">Закрыть</button>
+      <button type="button" class="modal-close" aria-label="Закрыть"></button>
    </section>
 
 
