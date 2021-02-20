@@ -1681,7 +1681,7 @@
   color: var(--basic-black);
 }
 
-.services-slogan, .services-desc, .about-contacts p{
+.services-slogan, .services-item p, .about-contacts p{
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px
@@ -1800,11 +1800,7 @@
   margin-bottom: 30px;
 }
 
-.services-desc{
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 26px;
-}
+
 
 .services-item .button{
   width: 195px;
@@ -1841,6 +1837,11 @@
   right: -10px;
 }
 
+.services-list p{
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
 
 
 
@@ -1912,11 +1913,16 @@
   padding-right: 120px;
 }
 
-.contacts-minimap{
+.contacts-link{
+  display: block;
   background: var(--greylight);
+  margin-bottom: 26px;
+}
+
+.contacts-minimap{
   width: 300px;
   height: 158px;
-  margin-bottom: 25px;
+
 }
 
 .contacts .button{
@@ -2043,13 +2049,17 @@
 .footer-bottom .container{
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 1fr auto auto;
-  grid-template-columns: auto 1fr auto auto;
+  -ms-grid-columns: min-content 1fr min-content min-content;
+  grid-template-columns: min-content 1fr min-content min-content;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 107px;
   overflow: hidden;
+}
+
+.copyright{
+  width: 200px;
 }
 
 .page-footer .gold{

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
    <head>
-      <meta charset="utf-8" class="page">
+      <meta charset="utf-8">
       <title>HTML Academy: Каталог</title>
       <link rel="icon" href="favicon.ico">
       <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -43,9 +43,9 @@
             <div class="header-info">
                <h1 class="visualy-hidden">Каталог</h1>
                <p class="top-slogan">
-                  <i>Интернет-магазин<br>
-                  строительных материалов<br>
-                  и инструментов для ремонта</i>
+                  <i>Интернет-магазин
+                  строительных материалов
+                  и&nbsp;инструментов для ремонта</i>
                </p>
             </div>
             <div class="top-contacts">
@@ -363,7 +363,9 @@
             <div class="title-wrapper back-lightblue perfo-title">
                <h2 class="title catalog-title">Пара слов о перфораторах</h2>
             </div>
-            <p>Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+            <p>Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+            <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p>
+            <p>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
          </div>
       </section>
    </main>
@@ -407,7 +409,8 @@
 
       <section class="footer-bottom">
          <div class="container">
-            <p class="copyright">© 2010–2019 Компания «Техномарт»<br><span>Все права защищены</span></p>
+            <p class="copyright">© 2010–2019 Компания «Техномарт»
+            <span>Все права защищены</span></p>
 
             <!-- Блок социльных кнопок -->
             <section class="social">
@@ -434,11 +437,11 @@
                </ul>
             </section>
 
-            <p class="dev-email">Обратная связь:<br>
+            <p class="dev-email">Обратная связь:
                <a href="mailto:mail@htmlacademy.ru" target="blank" class="gold">mail@htmlacademy.ru</a>
             </p>
 
-            <p class="dev-site">Разработано —<br>
+            <p class="dev-site">Разработано&nbsp;—
                <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank" class="gold">htmlacademy.ru</a>
             </p>
          </div>
@@ -447,23 +450,25 @@
 
 
    <!-- Модальное окно корзины -->
-   <section class="modal modal-add">
-      <h2 class="visualy-hidden">Сообщение корзины:</h2>
-      <div class="modal-wrapper">
-         <div class="wrapper-m-content">
-            <div class="m-container">
-               <h2 class="modal-add-title">Товар добавлен в корзину!</h2>
+   <div class="modal-fade">
+      <section class="modal modal-add">
+         <h2 class="visualy-hidden">Сообщение корзины:</h2>
+         <div class="modal-wrapper">
+            <div class="wrapper-m-content">
+               <div class="m-container">
+                  <h2 class="modal-add-title">Товар добавлен в корзину!</h2>
+               </div>
+            </div>
+            <div class="wrapper-m-buttons">
+               <div class="m-container">
+                  <a href="#" class="button m-button-buy">Оформить заказ</a>
+                  <button  type="button" class="button m-button-add">Продолжить покупки</button>
+               </div>
             </div>
          </div>
-         <div class="wrapper-m-buttons">
-            <div class="m-container">
-               <a href="#" class="button m-button-buy">Оформить заказ</a>
-               <button  type="button" class="button m-button-add">Продолжить покупки</button>
-            </div>
-         </div>
-      </div>
-      <button type="button" class="modal-close">Закрыть</button>
-   </section>
+         <button type="button" class="modal-close" aria-label="Закрыть"></button>
+      </section>
+   </div>
 
   </body>
 </html>
