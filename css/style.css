@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Подключение шрифтов */
 /* Набор Cuprum */
 /* обычный */
@@ -2050,6 +2057,7 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: min-content 1fr min-content min-content;
+  grid-template-columns: -webkit-min-content 1fr -webkit-min-content -webkit-min-content;
   grid-template-columns: min-content 1fr min-content min-content;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2089,8 +2097,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left bottom, left top, from(#212A3A), to(#212A3A));
   background: -o-linear-gradient(bottom, #212A3A, #212A3A);
+  background: -webkit-gradient(linear, left bottom, left top, from(#212A3A), to(#212A3A));
   background: linear-gradient(0deg, #212A3A, #212A3A);
   width: 44px;
   height: 44px;
