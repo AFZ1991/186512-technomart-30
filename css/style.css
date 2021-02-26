@@ -1234,7 +1234,7 @@
   bottom: 0;
   z-index: 10;
   margin: auto 0;
-
+  cursor: pointer;
 }
 
 .arrow-prev{
@@ -1244,6 +1244,14 @@
 .arrow-next{
   right: 21px;
   transform: rotate(180deg);
+}
+
+.slider-arrow:hover{
+  opacity: 0.7;
+}
+
+.slider-arrow:active{
+  opacity: 0.3;
 }
 
 .slider-controls {
@@ -1385,13 +1393,17 @@
   grid-row: 2 / 3;
   padding: 0;
   margin: 0;
+  grid-template-rows: 48px 30px 38px;
+  align-items: start;
 }
 
 .good-title{
+  height: 48px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  margin: 8px auto 7px auto;
+  /*margin: 8px auto 7px auto;*/
+  margin: auto;
 }
 
 .good-list .good-item:nth-child(1) .good-img{
@@ -1419,6 +1431,7 @@
 }
 
 .good-oldprice{
+  height: 30px;
   color: var(--text-silver);
   font-size: 17px;
   line-height: 18px;
@@ -1426,7 +1439,8 @@
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
   text-transform: uppercase;
-  margin: 7px auto 13px auto;
+ /* margin: 7px auto 13px auto;*/
+ margin: auto;
 }
 
 .good-newprice{
@@ -2494,7 +2508,7 @@
 }
 
 .filter-item:focus-within label{
-  outline: 4px solid rgba(0, 0, 0, 0.9);
+  outline: 3px solid rgba(0, 0, 0, 0.9);
 }
 
 .filter-input-checkbox:checked + label::before{
@@ -2576,7 +2590,7 @@
   grid-gap: 20px;
 }
 
-
+/*** сортировка ***/
 .goods-sorting{
   display: -ms-grid;
   display: grid;
@@ -2603,9 +2617,9 @@
 }
 
 .sorting-item{
- /* height: 15px;*/
   width: auto;
   padding: 0;
+  padding-top: 5px;
 }
 
 .sorting-item:nth-child(1){
@@ -2683,11 +2697,17 @@
   border-bottom-color: var(--basic-red);
 }
 
+.triangle:nth-child(4):focus-within .sorting-button::after{
+  border-bottom-color: var(--basic-black);
+}
+
 .triangle:nth-child(5) .sorting-button:active::after, .active.triangle .sorting-button::after{
   border-top-color: var(--basic-red);
 }
 
-
+.triangle:nth-child(5):focus-within .sorting-button::after{
+   border-top-color: var(--basic-black);
+}
 
 
 
@@ -2738,67 +2758,50 @@
 }
 
 .pagination-item{
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-greylight2);
   display: inline-block;
-  height: 38px;
-  width: 38px;
-  text-align: center;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 2px;
   margin-right: 5px;
   margin-bottom: 5px;
-}
-
-.pagination-item:last-child{
-  width: auto;
-  padding: 0 30px;
 }
 
 .pagination-link, .pagination-link:visited{
   text-decoration: none;
   color: var(--basic-black);
-  height: 100%;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-
-}
-
-.pagination-active .pagination-link{
-  color: var(--basic-white);
-}
-
-
-.pagination-item:hover{
-  border: 1px solid var(--basic-greylight);
+  box-sizing: border-box;
+  height: 38px;
+  padding: 0 15px;
+  border-radius: 2px;
   background-color: var(--basic-white);
+  border: 1px solid var(--basic-greylight2);
 }
 
-.pagination-item:hover .pagination-link{
-  color: var(--basic-black);
-}
-
-.pagination-item:active{
-  border: 1px solid var(--basic-red);
-  background-color: var(--basic-white);
-}
-
-.pagination-item:active .pagination-link{
-  color: var(--basic-black);
-}
-
-.pagination-current{
-  background-color: var(--basic-red);
+.pagination-item:last-child .pagination-link{
+  padding: 0 32px;
 }
 
 .pagination-current .pagination-link{
   color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.pagination-link:hover{
+  border: 1px solid var(--basic-greylight);
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.pagination-link:active{
+  border: 1px solid var(--basic-red);
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
 
 
+
+/* описание каталога */
 .catalod-desc{
   padding-bottom: 68px;
 }
