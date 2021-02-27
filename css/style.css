@@ -208,8 +208,8 @@
 
 .container{
   display: block;
-  width: 940px;
-  padding: 0;
+  width: 960px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -1554,7 +1554,7 @@
           filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
-.good-item:hover .menu-good, .current-item .menu-good{
+.good-item:focus-within .menu-good, .good-item:hover .menu-good, .current-item .menu-good{
   display: block;
 }
 
@@ -1685,7 +1685,7 @@
   content: "";
   position: absolute;
   top: 189px;
-  left: 230px;
+  left: 240px;
   width: 10px;
   height: 279px;
   background-image: url("../img/slider/v-line.png");
@@ -2915,7 +2915,7 @@ button.modal-close{
 }
 
 
-.modal-feedback{
+.modal-feedback .modal{
  /* display: none;*/
   width: 620px;
   height: 430px;
@@ -3062,7 +3062,7 @@ button.modal-close{
 }
 
 
-.modal-map{
+.modal-map .modal{
  /* display: none;*/
   width: 940px;
   height: 442px;
@@ -3078,7 +3078,7 @@ button.modal-close{
 }
 
 
-.modal-add{
+.modal-add .modal{
   width: 620px;
   height: 282px;
   background-color: var(--basic-white);
@@ -3165,19 +3165,20 @@ button.modal-close{
   display: block;
   animation: bounce 0.6s;
 }
-/*
+
 .error{
   animation: shake 0.6s;
-}*/
+}
 
 
 
 /************/
 /* Анимации */
 /************/
-/*@keyframes bounce{
+/* всплывание модального окна */
+@keyframes bounce{
   0%{
-    transform: translateY2200px);
+    transform: translateY(2200px);
   }
 
   70%{
@@ -3193,6 +3194,7 @@ button.modal-close{
   }
 }
 
+/* дрожание при ошибке данных */
 @keyframes shake{
   0%,
   100%{
@@ -3213,4 +3215,4 @@ button.modal-close{
   80%{
     transform: translateX(10px);
   }
-}*/
+}
