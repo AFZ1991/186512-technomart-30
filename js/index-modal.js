@@ -20,6 +20,8 @@ try{
 feedbackLink.addEventListener("click", function(evt){
 	evt.preventDefault();
 	feedbackPopup.classList.add("show");
+	document.body.style.overflow = 'hidden';
+	
 
 	if (storage){
 		feedbackName.value = storage;
@@ -31,6 +33,7 @@ feedbackLink.addEventListener("click", function(evt){
 
 feedbackClose.addEventListener("click", function(evt){
 	evt.preventDefault();
+	document.body.style.overflow = '';
 	feedbackPopup.classList.remove("show");
 	feedbackPopup.classList.remove("error");
 });
@@ -55,6 +58,7 @@ window.addEventListener("keydown", function(evt){
 	if(evt.which === 27){
 		if(feedbackPopup.classList.contains("show")){
 			evt.preventDefault();
+			document.body.style.overflow = '';
 			feedbackPopup.classList.remove("show");
 			feedbackPopup.classList.remove("error");
 		}
@@ -72,10 +76,12 @@ const mapClose = mapPopup.querySelector(".modal-close");
 mapLink.addEventListener("click", function(evt){
 	evt.preventDefault();
 	mapPopup.classList.add("show");
+	document.body.style.overflow = 'hidden';
 });
 
 mapClose.addEventListener("click", function(evt){
 	evt.preventDefault();
+	document.body.style.overflow = '';
 	mapPopup.classList.remove("show");
 	mapPopup.classList.remove("error");
 });
@@ -84,37 +90,11 @@ window.addEventListener("keydown", function(evt){
 	if(evt.which === 27){
 		if(mapPopup.classList.contains("show")){
 			evt.preventDefault();
+			document.body.style.overflow = '';
 			mapPopup.classList.remove("show");
-			mapPopup.classList.remove("error");
+			mapPopup.classList.remove("error");	
 		}
 	}
 });
 
 
-
-
-/* Модальное окно корзины */
-const addLink = document.querySelector(".buy-button");
-const addPopup = document.querySelector(".modal-add");
-const addClose = addPopup.querySelector(".modal-close");
-
-addLink.addEventListener("click", function(evt){
-	evt.preventDefault();
-	addPopup.classList.add("show");
-});
-
-addClose.addEventListener("click", function(evt){
-	evt.preventDefault();
-	addPopup.classList.remove("show");
-	addPopup.classList.remove("error");
-});
-
-window.addEventListener("keydown", function(evt){
-	if(evt.which === 27){
-		if(addPopup.classList.contains("show")){
-			evt.preventDefault();
-			addPopup.classList.remove("show");
-			addPopup.classList.remove("error");
-		}
-	}
-});

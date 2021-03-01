@@ -114,23 +114,23 @@
             </div>
             <!-- slider -->
             <div class="slider">
-               <ul class="slider-list">
-                  <li class="slider-card slide-1">
-                     <h3 class="slider-title">Дрели</h3>
-                     <p class="slider-desc">Соседям на радость</p>
-                     <a href="catalog.html" class="button slider-button">открыть каталог</a>
+               <ul class="slide-list">
+                  <li class="slide slide-1">
+                     <h3 class="slide-title">Дрели</h3>
+                     <p class="slide-desc">Соседям на радость</p>
+                     <a href="catalog.html" class="button slide-button">открыть каталог</a>
                   </li>
-                  <li class="slider-card slide-2 slider-card-active">
-                     <h3 class="slider-title">Перфораторы</h3>
-                     <p class="slider-desc">Настоящие мужские игрушки</p>
-                     <a href="catalog.html" class="button slider-button">открыть каталог</a>
+                  <li class="slide slide-2 slide-active">
+                     <h3 class="slide-title">Перфораторы</h3>
+                     <p class="slide-desc">Настоящие мужские игрушки</p>
+                     <a href="catalog.html" class="button slide-button">открыть каталог</a>
                   </li>
                </ul>
                <button class="slider-arrow arrow-prev" tabindex="0" aria-label="Предыдущий слайд"></button>
                <button class="slider-arrow arrow-next" tabindex="0" aria-label="Следующий слайд"></button>
                <div class="slider-controls">
-                  <button type="button" aria-label="слайд с дрелями" tabindex="0"></button>
-                  <button class="current" type="button" aria-label="слайд с перфораторами" tabindex="0"></button>
+                  <button class="dot" type="button" aria-label="слайд с дрелями" tabindex="0"></button>
+                  <button class="dot current" type="button" aria-label="слайд с перфораторами" tabindex="0"></button>
                </div>
             </div>
          </div>
@@ -269,27 +269,27 @@
          <div class="container">
             <h2 class="title title-black">Сервисы</h2>
             <div class="services-slogan">
-               <p>Хороший интернет-магазин отличается от плохого не только ценами!
-               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+               <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
+               <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             </div>
 
             <!-- меню сервисов -->
             <div class="services-content">
                <ul class="services-menu-list">
-                  <li class="services-menu-item services-menu-active">
-                     <button href="#" class="services-menu-button" >Доставка</button>
+                  <li class="services-menu-item">
+                     <button href="#" class="services-menu-button delivery-button services-active">Доставка</button>
                   </li>
                   <li class="services-menu-item">
-                     <button href="#" class="services-menu-button" tabindex="0">Гарантия</button>
+                     <button href="#" class="services-menu-button guarantee-button" tabindex="0">Гарантия</button>
                   </li>
                   <li class="services-menu-item">
-                     <button href="#" class="services-menu-button">Кредит</button>
+                     <button href="#" class="services-menu-button credit-button">Кредит</button>
                   </li>
                </ul>
 
                <!-- список сервисов -->
                <ul class="services-list">
-                  <li class="services-item">
+                  <li class="services-item delivery services-current">
                      <figure>
                         <figcaption class="title">Доставка</figcaption>
                         <p>Мы с удовольствием доставим ваш товар прямо</p>
@@ -299,7 +299,7 @@
                         <img src="img/services/delivery.png" width="468" height="261" alt="Рисунок грузовичка" class="services-pic">
                      </figure>
                   </li>
-                  <li class="services-item">
+                  <li class="services-item guarantee">
                      <figure>
                         <figcaption class="title">Гарантия</figcaption>
                         <p>Если купленный у нас товар поломается или заискрит,</p>
@@ -310,7 +310,7 @@
                         <img src="img/services/guarantee.png" width="389" height="283" alt="Рисунок медали" class="services-pic">
                      </figure>
                   </li>
-                  <li class="services-item">
+                  <li class="services-item credit">
                      <figure>
                         <figcaption class="title">Кредит</figcaption>
                         <p>Залезть в долговую яму стало проще!</p>
@@ -330,14 +330,14 @@
             <!-- о компании -->
             <section class="about">
                <div class="about-container">
-                  <h2 class="title title-black">Компания "техномарт"</h2>
+                  <h2 class="title title-black">Компания «техномарт»</h2>
                   <p class="about-desc">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
                   ремонта и строительства не оставит равнодушными любителей сэкономить на
                   гастарбайтерах.</p>
                </div>
                <div class="content-wrapper">
-                  <p class="about-desc">Мы можем доставить ваш товар в самые отдаленные точки России!
-                  Техномарт&nbsp;работает со многими транспортными компаниями:</p>
+                  <p class="about-desc">Мы можем доставить ваш товар в самые отдаленные точки России!</p>
+                  <p class="about-desc">Техномарт&nbsp;работает со многими транспортными компаниями:</p>
                   <ul class="transport-list">
                      <li class="transport-item">Деловые линии</li>
                      <li class="transport-item">Автотрейдинг</li>
@@ -488,6 +488,8 @@
       </section>
    </div>
 
-   <script src="js/modals.js"></script>
+   <script src="js/index-modal.js"></script>
+   <script src="js/index-services.js"></script>
+   <script src="js/index-slider.js"></script>
   </body>
 </html>
