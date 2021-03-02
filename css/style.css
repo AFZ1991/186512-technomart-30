@@ -2018,7 +2018,7 @@
 
 .footer-menu .footer-nav-item{
   margin: 0;
-  margin-left: 60px;
+  margin-left: 59px;
 }
 
 .footer-nav{
@@ -2066,7 +2066,9 @@
 
 .footer-address{
   margin: 0;
-  margin-top: 22px;
+  margin-top: 23px;
+  margin-left: 3px;
+  font-size: 18px;
 }
 
 .footer-middle .nav{
@@ -2082,6 +2084,8 @@
 
 .footer-bottom{
   background-color:var(--basic-darkblue);
+  line-height: 19px;
+  font-size: 16px;
 }
 
 .footer-bottom .container{
@@ -2098,7 +2102,15 @@
 }
 
 .copyright{
-  width: 200px;
+  width: 250px;
+  padding-top: 3px;
+  padding-left: 1px;
+  letter-spacing: -0.1px;
+  line-height: 19px;
+}
+
+.copyright span{
+  padding-top: 1px;
 }
 
 .page-footer .gold{
@@ -2106,8 +2118,8 @@
 }
 
 .social{
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin-left: 23px;
+  margin-top: 6px;
 }
 
 .social-buttons{
@@ -2131,14 +2143,13 @@
   background: -o-linear-gradient(bottom, #212A3A, #212A3A);
   background: -webkit-gradient(linear, left bottom, left top, from(#212A3A), to(#212A3A));
   background: linear-gradient(0deg, #212A3A, #212A3A);
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
 }
 
 .social-button{
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-right: 3px;
 }
 
 .social-link:hover, .social-link:active{
@@ -2147,6 +2158,10 @@
 
 .social-link svg{
   margin: auto;
+}
+
+.social-link path{
+  /*object-fit: fill;*/
 }
 
 .social-link:nth-child(1) svg{
@@ -2169,11 +2184,11 @@
 }
 
 .dev-email{
-  margin-right: 51px;
+  margin-right: 52px;
 }
 
 .dev-site{
-  margin-right: 13px;
+  margin-right: 14px;
 }
 
 .dev-email a:hover, .dev-site a:hover{
@@ -2682,7 +2697,7 @@
   border-bottom-color: var(--basic-red);
 }
 
-.sorting-button:active, .active .sorting-button{
+.sorting-button:active, .active{
   color: var(--basic-red);
   border-bottom-color: transparent;
 }
@@ -2805,15 +2820,10 @@
   padding: 0 32px;
 }
 
-.pagination-current .pagination-link{
-  color: var(--basic-white);
-  background-color: var(--basic-red);
-}
-
 .pagination-link:hover{
   border: 1px solid var(--basic-greylight);
-  background-color: var(--basic-white);
-  color: var(--basic-black);
+ /* background-color: var(--basic-white);*/
+  /*color: var(--basic-black);*/
 }
 
 .pagination-link:active{
@@ -2822,6 +2832,10 @@
   color: var(--basic-black);
 }
 
+.pagination-link.current{
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
 
 
 /* описание каталога */
